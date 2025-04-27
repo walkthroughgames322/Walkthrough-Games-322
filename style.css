@@ -1,0 +1,112 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ADD8E6; /* Light blue background */
+  color: #333;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  display: inline-block;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #4CAF50; /* Green on hover */
+}
+
+main {
+  padding: 40px 20px;
+}
+
+section {
+  padding: 20px; /* Adds space around the text */
+  margin: 0;
+}
+
+/* Footer styles */
+footer {
+  background-color:   #16c3b3  ;
+ 
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Home section */
+.home-section {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Simple Animation */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Logo style */
+.logo {
+  height: 70px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
