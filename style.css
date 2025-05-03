@@ -111,9 +111,7 @@ button:hover {
   margin-right: 10px;
 }
 
-.button-row {
-  button {
-  margin: 80px 80px 80px 80px; /* top right bottom left */
-}
-
+button {
   
+  margin: 10px 10px 10px 10px; /* top right bottom left */
+}
