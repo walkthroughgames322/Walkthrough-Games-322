@@ -111,9 +111,9 @@ button:hover {
   margin-right: 10px;
 }
 
-.cheat-btn{
-   padding-top: 80px;
-  padding-right: 80px;
-  padding-bottom: 80px;
-  padding-left: 80px;
+.button-row {
+  button {
+  margin: 10px 15px 20px 25px; /* top right bottom left */
 }
+
+  
