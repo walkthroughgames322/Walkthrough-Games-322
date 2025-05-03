@@ -110,3 +110,10 @@ button:hover {
   vertical-align: middle;
   margin-right: 10px;
 }
+
+.button-row {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
