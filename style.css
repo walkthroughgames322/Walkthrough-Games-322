@@ -119,3 +119,33 @@ button {
 	margin-left: 30px ;
 }
 
+/* Cheats page specific styles */
+.cheat-text {
+    display: none; /* Hide all cheat texts by default */
+    margin-left: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cheat-btn {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cheat-btn:hover {
+    background-color: #388e3c;
+}
