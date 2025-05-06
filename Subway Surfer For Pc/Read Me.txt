@@ -1,0 +1,14 @@
+Website: https://walkthroughgames322.github.io/Walkthrough-Games-322/games.html
+YouTube: https://www.youtube.com/@WalkthroughGames322
+
+
+==========
+Instructions
+==========
+1. Extract the Game - Subway Surfers.zip
+2.Install "AutoHotkey.exe"
+3.Open "Subsurf.exe" (AutoHotkey File - 'H - Icon') (File Given In Same Folder As This File)
+4.Now Open the Game - "Subway_Surfers.exe"
+Enjoy....!!
+
+Note: To close the Hot Key script you're running, after stopping playing, look at your system tray (near the clock) for an icon which has an "H", right-click it and press "Exit".
