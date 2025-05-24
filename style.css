@@ -1,203 +1,5 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* Modern Color Palette */
-:root {
-  --primary: #2a75bb; /* Nintendo blue */
-  --secondary: #ffcc00; /* Nintendo yellow */
-  --dark: #1a1a2e;
-  --light: #f8f9fa;
-  --accent: #e63946;
-  --success: #4CAF50;
-  --info: #00b4d8;
-}
-
-/* Modern Base Styles */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--dark);
-  color: var(--light);
-  background-image: url('images/gaming-bg.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  line-height: 1.6;
-}
-
-/* Modern Overlay */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(42, 117, 187, 0.7) 100%);
-  z-index: -1;
-}
-
-/* Loading Animation */
-.loading::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--dark);
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loading::after {
-  content: '';
-  width: 50px;
-  height: 50px;
-  border: 5px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  border-top-color: var(--secondary);
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-header {
-  background-color: rgba(26, 26, 46, 0.95);
-  padding: 15px 5%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  width: 100%; /* Add this */
-  box-sizing: border-box; /* Add this */
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 15px;
- 
-}
-
-.logo {
-  height: 50px;
-  width: auto;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: rotate(15deg) scale(1.1);
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  font-weight: 700;
-  background: linear-gradient(to right, var(--secondary), var(--primary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  transition: all 0.3s ease;
-}
-
-header h1:hover {
-  text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-}
-
-/* Modern Navigation */
-nav {
-  display: flex;
-
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--light);
-  font-weight: 600;
-  font-size: 1.1rem;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--secondary);
-  transition: width 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--secondary);
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-nav a.active {
-  color: var(--secondary);
-}
-
-nav a.active::after {
-  width: 100%;
-}
-
-/* Modern Main Content */
-main {
-  padding: 40px 5%;
-  position: relative;
-  min-height: calc(100vh - 160px);
-}
-
-/* Modern Cards */
-.card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 30px;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* Modern Buttons */
-.btn {
-  display: inline-block;
+/* Toggle button for game details */
+.toggle-game-details {
   background: linear-gradient(135deg, var(--primary), var(--info));
   color: white;
   padding: 12px 24px;
@@ -206,364 +8,74 @@ main {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(42, 117, 187, 0.3);
-  text-decoration: none;
-  text-align: center;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: left;
 }
 
-.btn:hover {
+.toggle-game-details:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(42, 117, 187, 0.4);
   background: linear-gradient(135deg, var(--info), var(--primary));
 }
 
-.btn-secondary {
-  background: linear-gradient(135deg, var(--secondary), #ff9500);
-}
-
-.btn-secondary:hover {
-  background: linear-gradient(135deg, #ff9500, var(--secondary));
-}
-
-.btn-accent {
-  background: linear-gradient(135deg, var(--accent), #f72585);
-}
-
-.btn-accent:hover {
-  background: linear-gradient(135deg, #f72585, var(--accent));
-}
-
-/* Modern Cheats Section */
-.cheats-container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 20px;
-}
-
-.button-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.cheat-btn {
-  padding: 12px 15px;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  text-align: left;
-}
-
-.cheat-btn:hover, .cheat-btn.active {
-  background: var(--primary);
-  border-color: var(--primary);
-  transform: translateY(-2px);
-}
-
-.cheat-text {
-  display: none;
-  background: rgba(26, 26, 46, 0.8);
-  padding: 25px;
+/* Container for download details, hidden by default */
+.game-details {
+  margin-top: 15px;
+  background: rgba(26, 26, 46, 0.85);
+  padding: 20px;
   border-radius: 12px;
-  border-left: 4px solid var(--secondary);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  color: var(--light);
+  font-size: 0.95rem;
 }
 
-.cheat-text h1 {
-  color: var(--secondary);
-  margin-top: 0;
-  font-size: 2rem;
-  border-bottom: 2px solid rgba(255, 204, 0, 0.3);
-  padding-bottom: 10px;
+/* Spinner animation for download button */
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
-.cheat-text p {
-  margin: 10px 0;
-  padding-left: 15px;
-  position: relative;
+/* Download button, aligns with your theme but green */
+.download-btn {
+  padding: 12px 24px;
+  background-color: var(--success);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.5);
 }
 
-.cheat-text p::before {
-  content: '•';
-  color: var(--secondary);
-  position: absolute;
-  left: 0;
+.download-btn:hover {
+  background-color: #388e3c; /* Darker green */
+  transform: scale(1.05);
 }
 
-.action {
-  color: var(--accent);
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin: 20px 0 10px !important;
+.download-btn:disabled,
+.downloaded {
+  background-color: #2e7d32 !important;
+  cursor: default;
+  box-shadow: none;
 }
 
-/* Modern Footer */
-footer {
-  background-color: var(--dark);
-  text-align: center;
-  padding: 22px;
-  font-size: 0.9rem;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-  width: 100%;
-}
-
-footer p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-/* Modern Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Smooth fade-in for toggled content */
 .fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.pulse {
-  animation: pulse 2s infinite;
-}
-
-/* Game Cards */
-.game-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 25px;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  gap: 20px;
-}
-
-.game-image {
-  flex: 0 0 200px;
-}
-
-.game-image img {
-  width: 100%;
-  border-radius: 8px;
-  height: auto;
-}
-
-.game-info {
-  flex: 1;
-}
-
-.game-card h3 {
-  color: var(--secondary);
-  margin-top: 0;
-}
-
-.game-meta {
-  display: flex;
-  gap: 15px;
-  margin: 10px 0;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-}
-
-.game-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Search Bar */
-.search-container {
-  margin-bottom: 30px;
-}
-
-.search-input {
-  width: 100%;
-  padding: 12px 20px;
-  border-radius: 50px;
-  border: none;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 1rem;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.search-input:focus {
-  outline: none;
-  border-color: var(--secondary);
-  box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.3);
-}
-
-/* Back to Top Button */
-.back-to-top {
-  position: fixed;
-  bottom: 80px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  z-index: 99;
-}
-
-.back-to-top:hover {
-  background: var(--secondary);
-  transform: translateY(-3px);
-}
-
-/* Toast Notifications */
-.toast {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 12px 24px;
-  border-radius: 50px;
-  background: var(--dark);
-  color: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-.toast.show {
-  opacity: 1;
-}
-
-.toast-success {
-  background: var(--success);
-}
-
-.toast-error {
-  background: var(--accent);
-}
-
-.toast-info {
-  background: var(--info);
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .cheats-container {
-    grid-template-columns: 1fr;
-  }
-  
-  .button-row {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
-  
-  header {
-    flex-direction: column;
-    padding: 15px;
-    gap: 15px;
-  }
-  
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .button-row {
-    grid-template-columns: 1fr;
-  }
-  
-  main {
-    padding: 20px;
-    margin-bottom: 60px;
-  }
-  
-  .logo {
-    height: 40px;
-  }
-  
-  header h1 {
-    font-size: 1.5rem;
-  }
-  
-  .game-card {
-    flex-direction: column;
-  }
-  
-  .game-image {
-    flex: 0 0 auto;
-    margin-bottom: 15px;
-  }
-}
-
-/* Dark Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--dark);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--primary);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary);
-}
-
-
-
-.download-btn {
-  padding: 12px 24px;
-  background-color: #2ecc71;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.download-btn:hover {
-  background-color: #27ae60;
-  transform: scale(1.05);
+/* Keep your existing keyframes spin for spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
