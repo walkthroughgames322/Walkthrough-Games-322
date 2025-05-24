@@ -1,19 +1,18 @@
-<!-- games.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Games - Walkthrough Games 322</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 </head>
 <body>
 
 <header>
   <div class="header-left">
-    <img src="images/logo.png" alt="Walkthrough Games 322 Logo" class="logo">
+    <img src="images/logo.png" alt="Walkthrough Games 322 Logo" class="logo" />
     <h1>Walkthrough Games 322</h1>
   </div>
   <nav>
@@ -25,24 +24,31 @@
 </header>
 
 <main>
-<div class="game-card">
-  <button class="game-toggle-btn" onclick="toggleGameDetails()">Grand Theft Auto Vice City</button>
+  <section class="games-section fade-in">
+    <h2>Download Games</h2>
 
-  <div id="game-details" style="display: none; margin-top: 15px;">
-    <a href="https://1drv.ms/u/c/ab9f30f98b6fd85f/EURdv_A38_pInIC1bjYzdLUBKtTZRraf5d3vWONRbemXlw?e=X7KG55" target="_blank">
-      <button class="download-btn">Download Game</button>
-    </a>
-    <p style="margin-top: 10px; color: #eee;">
-      Download full Grand Theft Auto Vice City game here. Click the button above to start your download directly from OneDrive. Enjoy the gameplay and explore the city!
-    </p>
-  </div>
-</div>
+    <div class="game-card">
+      <button class="btn toggle-game-details">Grand Theft Auto Vice City</button>
 
+      <div class="game-details" style="display: none; margin-top: 15px;">
+        <a href="https://1drv.ms/u/s!YOUR_ONEDRIVE_LINK_HERE" target="_blank" rel="noopener noreferrer">
+          <button class="btn download-btn">Download Game</button>
+        </a>
+        <p style="margin-top: 10px; color: #eee;">
+          Download the full Grand Theft Auto Vice City game here. Click the button above to start your download directly from OneDrive. Enjoy the gameplay and explore the city!
+        </p>
+      </div>
+    </div>
+
+    <!-- You can add more game cards here -->
+
+  </section>
 </main>
 
 <footer>
   <p>&copy; 2025 Walkthrough Games 322. All rights reserved.</p>
 </footer>
 
+<script src="your-script.js"></script>
 </body>
 </html>
