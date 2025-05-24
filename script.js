@@ -112,16 +112,21 @@ function initGameCards() {
     const gameCards = document.querySelectorAll('.game-card');
     
     gameCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            // Don't trigger if clicking on a button or link
-            if (e.target.tagName !== 'BUTTON' && e.target.tagName !== 'A') {
-                this.classList.toggle('expanded');
-            }
-        });
+        // Toggle game details on clicking toggle button only
+        const toggleBtn = card.querySelector('.toggle-game-details');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const details = card.querySelector('.game-details');
+                if (details) {
+                    details.style.display = details.style.display === 'none' ? 'block' : 'none';
+                }
+            });
+        }
     });
     
-    // Add animation to download buttons
-    const downloadButtons = document.querySelectorAll('.game-card .btn');
+    // Add animation and toast on download button click
+    const downloadButtons = document.querySelectorAll('.game-card .download-btn');
     downloadButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -134,7 +139,7 @@ function initGameCards() {
                 this.classList.add('downloaded');
                 showToast('Download completed successfully!', 'success');
                 
-                // Reset button after 3 seconds
+                // Reset after 3 seconds
                 setTimeout(() => {
                     this.innerHTML = originalText;
                     this.disabled = false;
