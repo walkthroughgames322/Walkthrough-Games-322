@@ -549,3 +549,21 @@ footer p {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary);
 }
+
+
+
+.download-btn {
+  padding: 12px 24px;
+  background-color: #2ecc71;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
